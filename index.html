@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Union Bank of India Officers' Association - Tamilnadu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #8B0000, #B22222);
+            color: #333;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            height: 120px;
+        }
+
+        .header h1 {
+            margin: 10px 0 0;
+            color: #8B0000;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #8B0000;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #A52A2A;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .success {
+            display: none;
+            color: green;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <!-- Replace logo.png with your actual logo file name -->
+        <img src="logo.png" alt="UBIOATN Logo">
+        <h1>Union Bank of India Officers' Association</h1>
+        <h3>Tamilnadu</h3>
+    </div>
+
+    <div class="container">
+        <h2>Inter-Zone Transfer Request Form</h2>
+
+        <form id="transferForm">
+
+            <label>Employee Name</label>
+            <input type="text" required>
+
+            <label>Employee ID</label>
+            <input type="text" required>
+
+            <label>Mobile Number</label>
+            <input type="tel" required>
+
+            <label>Email ID</label>
+            <input type="email" required>
+
+            <label>Present Zone</label>
+            <input type="text" required>
+
+            <label>Requested Zone</label>
+            <input type="text" required>
+
+            <label>Reason for Transfer</label>
+            <textarea rows="4" required></textarea>
+
+            <button type="submit">Submit Request</button>
+
+            <div class="success" id="successMessage">
+                Your request has been submitted successfully!
+            </div>
+
+        </form>
+    </div>
+
+    <div class="footer">
+        © 2026 Union Bank of India Officers' Association - Tamilnadu
+    </div>
+
+    <script>
+        document.getElementById("transferForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("successMessage").style.display = "block";
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
